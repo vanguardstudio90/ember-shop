@@ -27,7 +27,7 @@ const shippingOptions = {
 };
 
 const promoCodes = { "EMBER10": 10 };
-
+const colors = ["cream", "black", "brown", "velvet", "red", "orange", "pink", "blue", "yellow", "green", "light-brown", "dark-blue", "light-blue", "light-pink", "gray", "light-gray", "dark-pink", "light-velvet"];
 const currency = "usd";
 
 export default async (req) => {
@@ -55,7 +55,8 @@ export default async (req) => {
     const cents = product.prices[item.size] * (100 - percent);
 
     params.append(`line_items[${i}][price_data][currency]`, currency);
-    params.append(`line_items[${i}][price_data][product_data][name]`, `${product.name} (${item.size.replace("g", " g")})`);
+    const color = colors.includes(item.color) ? item.color.replace("-", " ") : "no color";
+    params.append(`line_items[${i}][price_data][product_data][name]`, `${product.name} (${item.size.replace("g", " g")}, ${color})`);
     params.append(`line_items[${i}][price_data][unit_amount]`, String(cents));
     params.append(`line_items[${i}][quantity]`, String(qty));
     i++;
