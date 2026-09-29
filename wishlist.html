@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ember Candle Shop</title>
-    <meta name="description" content="Handmade soy candles inspired by nature. Discover calming scents for a cozier home, with eco-friendly packaging and fast shipping across the EU.">
+    <title>Your Wishlist |Ember Candle Shop</title>
+    <meta name="description" content="The Ember candles you've saved for later.">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="styles.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
             <i></i>
             <p class="logo-text">Ember</p>
         </a>
-        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="navbar" id="main-menu">
+       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="navbar" id="main-menu">
            
             <a href="index.html">Home</a>
             <a href="all.html">Shop</a>
@@ -28,7 +28,7 @@
             <a href="contact.html">Contact</a>
             </div>
             <nav class="header-icons">
-    <a href="all.html#search" aria-label="Search">
+   <a href="all.html#search" aria-label="Search">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="11" cy="11" r="8"/>
     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -49,45 +49,20 @@
 </a>
 </nav>
     </header>
-    <main class="cart-page">
-<h1>Your Cart<span class="cart-count"></span></h1>
-<div class="cart-empty" hidden>
-    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-    <h2>Your cart is empty</h2>
-    <p>Find a scent you love, and it'll show up here.</p>
+    <main class="wishlist-page">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>/</span>
+    <span>Wishlist</span>
+</nav>
+<h1>Your Wishlist<span class="wishlist-count"></span></h1>
+<div class="wishlist-empty" hidden>
+    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+    <h2>Your wishlist is empty</h2>
+    <p>Tap the heart on any candle to save it here for later.</p>
     <a class="checkout-btn" href="all.html">Browse our candles</a>
 </div>
-<div class="cart-content">
-    <ul class="cart-items"></ul>
-    <form class="promo">
-        <label for="promo-code">Have a Promo Code?</label>
-        <input type="text" id="promo-code" placeholder="Enter code...">
-        <button type="submit">Apply</button>
-        <p id="promo-message" aria-live="polite"></p>
-    </form>
-    <div class="cart-summary">
-        <dl>
-            <div>
-                <dt>Subtotal</dt>
-                <dd id="subtotal">$0</dd>
-            </div>
-            <div id="discount-row" hidden>
-                <dt>Discount</dt>
-                <dd id="discount">$0</dd>
-            </div>
-            <div>
-                <dt>Shipping</dt>
-                <dd>Calculated at checkout</dd>
-            </div>
-            <div class="cart-total">
-                <dt>Total</dt>
-                <dd id="total">$0</dd>
-            </div>
-        </dl>
-        <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
-    </div>
-</div>
-<a href="all.html" class="continue-link">Continue Shopping</a>
+<section class="product-grid wishlist-grid"></section>
     </main>
       <footer>
         <div class="footer-text">
@@ -95,7 +70,7 @@
             <i></i>
             <p class="logo-text">Ember</p>
         </a>
-        <p class="description">2026 Ember. All rights reserved.</p>
+        <p class="description">2026 Ember. All right reserved.</p>
    </div>
 </footer>
 <script src="cart.js"></script>

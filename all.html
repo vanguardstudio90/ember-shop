@@ -7,33 +7,37 @@
     <meta name="description" content="Shop all Ember candles. Browse 20 handmade soy candle scents, from fresh and floral to warm and woody. Fast shipping across the EU.">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>
-        <a href="home.html" class="logo">
-            <i></i>
+        <a href="index.html" class="logo">
+            
             <p class="logo-text">Ember</p>
         </a>
-        <div class="navbar">
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="navbar" id="main-menu">
+           
             <a href="index.html">Home</a>
             <a href="all.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             </div>
             <nav class="header-icons">
-    <a href="/search" aria-label="Search">
+    <a href="all.html#search" aria-label="Search">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="11" cy="11" r="8"/>
     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
   </svg>
 </a>
-<a href="/wishlist" aria-label="Wishlist">
+<a href="/wishlist.html" aria-label="Wishlist">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
   </svg>
 </a>
-<a href="/cart" class="cart" aria-label="Cart">
+<a href="/cart.html" class="cart" aria-label="Cart">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
     <line x1="3" y1="6" x2="21" y2="6"/>
@@ -45,326 +49,404 @@
     </header>
     <main>
 <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="home.html">Home</a>
+    <a href="index.html">Home</a>
     <span>/</span>
     <span>Shop</span>
 </nav>
 <div class="catalog-intro">
     <h1>All Candles</h1>
     <p class="description">Discover our collection of handmade candles, inspired by nature and everyday moments.</p>
+ <img class="intro-leaf" src="images/all-leaf.png" alt="">
 </div>
 <div class="filter-bar">
-<select name="sort">
-    <option>Sort by: Featured</option>
-    <option>Price: Low to High</option>
-    <option>Price: High to Low</option>
-    <option>Newest</option>
-</select>
+     <label for="search" class="visually-hidden">Search candles</label>
+    <input type="search" id="search" class="search-input" placeholder="Search candles..." autocomplete="off">
+
+    <label for="sort">Sort by</label>
+    <select id="sort" name="sort">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="newest">Newest</option>
+    </select>
 </div>
+<div class="catalog">
 <aside class="filters">
     <form>
-      <select name="scent">
-    <legend>Scent</legend>
-        <option>Vanilla</option>
-        <option>Amber</option>
-        <option>Cedar</option>
-        <option>Citrus</option>
-        <option>Fresh</option>
-        <option>Woody</option>
-    </select>
-    <fieldset>
-        <legend>Price</legend>
-        <div class="price-slider">
-            <input type="range" name="min-price" min="0" max="50" value="0" aria-label="Minimum Price">
-            <input type="range" name="max-price" min="0" max="50" value="50" aria-label="Maximum Price">
-        </div>
-        <div class="price-labels">
-            <span>$0</span>
-            <span>$50</span>
-        </div>
-    </fieldset>
-    <select name="size">
-        <option>180g</option>
-        <option>300g</option>
-    </select>
+        <fieldset>
+            <legend>Scent</legend>
+            <label><input type="checkbox" name="scent" value="vanilla"> Vanilla</label>
+            <label><input type="checkbox" name="scent" value="amber"> Amber</label>
+            <label><input type="checkbox" name="scent" value="cedar"> Cedar</label>
+            <label><input type="checkbox" name="scent" value="citrus"> Citrus</label>
+            <label><input type="checkbox" name="scent" value="floral"> Floral</label>
+            <label><input type="checkbox" name="scent" value="fresh"> Fresh</label>
+            <label><input type="checkbox" name="scent" value="woody"> Woody</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Price</legend>
+            <div class="price-slider">
+                <input type="range" name="min-price" min="20" max="30" value="20" aria-label="Minimum price">
+                <input type="range" name="max-price" min="20" max="30" value="30" aria-label="Maximum price">
+            </div>
+            <div class="price-labels">
+                <span id="min-price-label">$20</span>
+                <span id="max-price-label">$30</span>
+            </div>
+        </fieldset>
       <fieldset>
-    <legend>Color</legend>
+     <legend>Color</legend>
     <div class="color-options">
         <label class="swatch">
-            <input type="radio" name="color" value="sage">
-            <span class="swatch-circle sage"></span>
-            <span class="swatch-name">Sage</span>
+            <input type="checkbox" name="color" value="cream">
+            <span class="swatch-circle cream"></span>
+            <span class="swatch-name">Cream</span>
         </label>
         <label class="swatch">
-            <input type="radio" name="color" value="sand">
-            <span class="swatch-circle sand"></span>
-            <span class="swatch-name">Sand</span>
+            <input type="checkbox" name="color" value="black">
+            <span class="swatch-circle black"></span>
+            <span class="swatch-name">Black</span>
         </label>
         <label class="swatch">
-            <input type="radio" name="color" value="clay">
-            <span class="swatch-circle clay"></span>
-            <span class="swatch-name">Clay</span>
+            <input type="checkbox" name="color" value="brown">
+            <span class="swatch-circle brown"></span>
+            <span class="swatch-name">Brown</span>
         </label>
         <label class="swatch">
-            <input type="radio" name="color" value="rose">
-            <span class="swatch-circle rose"></span>
-            <span class="swatch-name">Rose</span>
+            <input type="checkbox" name="color" value="velvet">
+            <span class="swatch-circle violet"></span>
+            <span class="swatch-name">Velvet</span>
+        </label>
+        <label class="swatch">
+            <input type="checkbox" name="color" value="red">
+            <span class="swatch-circle red"></span>
+            <span class="swatch-name">Red</span>
+        </label>
+        <label class="swatch">
+            <input type="checkbox" name="color" value="orange">
+            <span class="swatch-circle orange"></span>
+            <span class="swatch-name">Orange</span>
+        </label>
+        <label class="swatch">
+            <input type="checkbox" name="color" value="pink">
+            <span class="swatch-circle pink"></span>
+            <span class="swatch-name">Pink</span>
+        </label>
+        <label class="swatch">
+            <input type="checkbox" name="color" value="blue">
+            <span class="swatch-circle blue"></span>
+            <span class="swatch-name">Blue</span>
+        </label>
+        <label class="swatch">
+            <input type="checkbox" name="color" value="yellow">
+            <span class="swatch-circle yellow"></span>
+            <span class="swatch-name">Yellow</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="green">
+            <span class="swatch-circle green"></span>
+            <span class="swatch-name">Green</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="light-brown">
+            <span class="swatch-circle light-brown"></span>
+            <span class="swatch-name">Light Brown</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="dark-blue">
+            <span class="swatch-circle dark-blue"></span>
+            <span class="swatch-name">Dark Blue</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="light-blue">
+            <span class="swatch-circle light-blue"></span>
+            <span class="swatch-name">Light Blue</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="light-pink">
+            <span class="swatch-circle light-pink"></span>
+            <span class="swatch-name">Light Pink</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="gray">
+            <span class="swatch-circle gray"></span>
+            <span class="swatch-name">Gray</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="light-gray">
+            <span class="swatch-circle light-gray"></span>
+            <span class="swatch-name">Light Gray</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="dark-pink">
+            <span class="swatch-circle dark-pink"></span>
+            <span class="swatch-name">Dark Pink</span>
+        </label>
+         <label class="swatch">
+            <input type="checkbox" name="color" value="light-velvet">
+            <span class="swatch-circle light-velvet"></span>
+            <span class="swatch-name">Light Velvet</span>
         </label>
     </div>
 </fieldset>
+<button type="reset" class="clear-filters">Clear filters</button>
+
     </form>
 </aside>
 <section class="product-grid">
-    <div class="product-card">
+    <div class="product-card" data-scent="vanilla" data-price="24" data-colors="black cream green pink">
         <div class="image-wrap">
-            <img src="vanilla-bliss.jpg" alt="Vanilla Bliss candle">
+            <img src="images/cream-vanilla.png" alt="Vanilla Bliss candle">
             <button class="like-btn" data-id="vanilla-bliss" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Vanilla Bliss</h2>
+        <h2><a href="product-pages/vanilla-bliss.html">Vanilla Bliss</a></h2>
         <p class="price">$24</p>
     </div>
- <div class="product-card">
+ <div class="product-card" data-scent="amber" data-price="26" data-colors="green brown cream black">
         <div class="image-wrap">
-            <img src="" alt="Amber Wood candle">
+            <img src="images/amber-wood.png" alt="Amber Wood candle">
             <button class="like-btn" data-id="amber-wood" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Amber Wood</h2>
+        <h2><a href="product-pages/amber-wood.html">Amber Wood</a></h2>
         <p class="price">$26</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="cedar" data-price="24" data-colors="black brown cream green">
         <div class="image-wrap">
-            <img src="" alt="Cedar Escape candle">
+            <img src="images/black-cedar.png" alt="Cedar Escape candle">
             <button class="like-btn" data-id="cedar-escape" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Cedar Escape</h2>
+        <h2><a href="product-pages/cedar-escape.html">Cedar Escape</a></h2>
         <p class="price">$24</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="floral" data-price="22" data-colors="cream green red velvet">
         <div class="image-wrap">
-            <img src="" alt="Rose Garden Candle">
+            <img src="images/cream-rose.png" alt="Rose Garden Candle">
             <button class="like-btn" data-id="rose-garden" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Rose Garden</h2>
+        <h2><a href="product-pages/rose-garden.html">Rose Garden</a></h2>
         <p class="price">$22</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="citrus" data-price="24" data-colors="cream green orange pink">
         <div class="image-wrap">
-            <img src="" alt="Citrus Bloom candle">
+            <img src="images/cream-citrus.png" alt="Citrus Bloom candle">
             <button class="like-btn" data-id="citrus-bloom" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Citrus Bloom</h2>
+        <h2><a href="product-pages/citrus-bloom.html">Citrus Bloom</a></h2>
         <p class="price">$24</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="woody" data-price="26" data-colors="blue brown cream green">
         <div class="image-wrap">
-            <img src="" alt="Forest Night candle">
+            <img src="images/blue-forest.png" alt="Forest Night candle">
             <button class="like-btn" data-id="forest-night" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Forest Night</h2>
+       <h2><a href="product-pages/forest-night.html">Forest Night</a></h2>
         <p class="price">$26</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="fresh" data-price="24" data-colors="blue cream dark-blue light-blue">
         <div class="image-wrap">
-            <img src="" alt="Ocean Breeze candle">
+            <img src="images/dark-blue-ocean.png" alt="Ocean Breeze candle">
             <button class="like-btn" data-id="ocean-breeze" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Ocean Breeze</h2>
+        <h2><a href="product-pages/ocean-breeze.html">Ocean Breeze</a></h2>
         <p class="price">$24</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="floral" data-price="22" data-colors="cream velvet pink light-velvet">
         <div class="image-wrap">
-            <img src="" alt="Lavender Calm candle">
+            <img src="images/cream-lavender.png" alt="Lavender Calm candle">
             <button class="like-btn" data-id="lavender-calm" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Lavender Calm</h2>
+      <h2><a href="product-pages/lavender-calm.html">Lavender Calm</a></h2>
         <p class="price">$22</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="vanilla" data-price="24" data-colors="black light-brown brown cream">
         <div class="image-wrap">
-            <img src="" alt="Coffee Mood candle">
+            <img src="images/black-coffee.png" alt="Coffee Mood candle">
             <button class="like-btn" data-id="coffee-mood" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Coffee Mood</h2>
+        <h2><a href="product-pages/coffee-mood.html">Coffee Mood</a></h2>
         <p class="price">$24</p>
     </div>
-     <div class="product-card">
+     <div class="product-card" data-scent="vanilla" data-price="24" data-colors="cream brown orange yellow">
         <div class="image-wrap">
-            <img src="" alt="Honey Glow candle">
+            <img src="images/cream-honey.png" alt="Honey Glow candle">
             <button class="like-btn" data-id="honey-glow" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Honey Glow</h2>
+        <h2><a href="product-pages/honey-grow.html">Honey Glow</a></h2>
         <p class="price">$24</p>
     </div>
-       <div class="product-card">
+     <div class="product-card" data-scent="fresh" data-price="26" data-colors="blue dark-blue cream light-blue">
         <div class="image-wrap">
-            <img src="" alt="Sea Salt Sage candle">
+            <img src="images/blue-salt.png" alt="Sea Salt Sage candle">
             <button class="like-btn" data-id="sea-salt-sage" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Sea Salt Sage</h2>
+       <h2><a href="product-pages/sea-salt.html">Sea Salt Sage</a></h2>
         <p class="price">$26</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="floral" data-price="22" data-colors="pink cream light-pink red">
         <div class="image-wrap">
-            <img src="" alt="Cherry Blossom candle">
+            <img src="images/cherry.png" alt="Cherry Blossom candle">
             <button class="like-btn" data-id="cherry-blossom" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Cherry Blossom</h2>
+        <h2><a href="product-pages/cherry-blossom.html">Cherry Blossom</a></h2>
         <p class="price">$22</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="woody" data-price="26" data-colors="black cream green orange">
         <div class="image-wrap">
-            <img src="" alt="Pine Cabin candle">
+            <img src="images/cream-pine.png" alt="Pine Cabin candle">
             <button class="like-btn" data-id="pine-cabin" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Pine Cabin</h2>
+        <h2><a href="product-pages/pine-cabin.html">Pine Cabin</a></h2>
         <p class="price">$26</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="citrus" data-price="22" data-colors="brown cream green yellow">
         <div class="image-wrap">
-            <img src="" alt="Lemon Grove candle">
+            <img src="images/brown-lemon.png" alt="Lemon Grove candle">
             <button class="like-btn" data-id="lemon-grove" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Lemon Grove</h2>
+        <h2><a href="product-pages/lemon-grove.html">Lemon Grove</a></h2>
         <p class="price">$22</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="woody" data-price="28" data-colors="cream pink dark-pink velvet">
         <div class="image-wrap">
-            <img src="" alt="Fig & Cassis candle">
+            <img src="images/fig.png" alt="Fig & Cassis candle">
             <button class="like-btn" data-id="fig&cassis" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Fig & Cassis</h2>
+        <h2><a href="product-pages/fig.html">Fig & Cassis</a></h2>
         <p class="price">$28</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="fresh" data-price="24" data-colors="blue cream green pink">
         <div class="image-wrap">
-            <img src="" alt="White Tea candle">
+            <img src="images/blue-white.png" alt="White Tea candle">
             <button class="like-btn" data-id="white-tea" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>White Tea</h2>
+        <h2><a href="product-pages/white-tea.html">White Tea</a></h2>
         <p class="price">$24</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="woody" data-price="28" data-colors="brown cream green black">
         <div class="image-wrap">
-            <img src="" alt="Smoked Oak candle">
+            <img src="images/brown-oak.png" alt="Smoked Oak candle">
             <button class="like-btn" data-id="smoked-oak" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Smoked Oak</h2>
+        <h2><a href="product-pages/smoked-oak.html">Smoked Oak</a></h2>
         <p class="price">$28</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="floral" data-price="24" data-colors="cream pink light-pink red">
         <div class="image-wrap">
-            <img src="" alt="Peony Dreams candle">
+            <img src="images/cream-peony.png" alt="Peony Dreams candle">
             <button class="like-btn" data-id="peony-dreams" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Peony Dreams</h2>
+        <h2><a href="product-pages/peony-dreams.html">Peony Dreams</a></h2>
         <p class="price">$24</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="amber" data-price="26" data-colors="brown cream orange red">
         <div class="image-wrap">
-            <img src="" alt="Autumn Spice candle">
+            <img src="images/brown-autumn.png" alt="Autumn Spice candle">
             <button class="like-btn" data-id="autumn-spice" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Autumn Spice</h2>
+        <h2><a href="product-pages/autumn-spice.html">Autumn Spice</a></h2>
         <p class="price">$26</p>
     </div>
-       <div class="product-card">
+       <div class="product-card" data-scent="fresh" data-price="22" data-colors="gray cream light-gray pink">
         <div class="image-wrap">
-            <img src="" alt="Cotton Linen candle">
+            <img src="images/cotton.png" alt="Cotton Linen candle">
             <button class="like-btn" data-id="cotton-linen" aria-label="Add to liked">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
                 </svg>
             </button>
         </div>
-        <h2>Cotton Linen</h2>
+       <h2><a href="product-pages/cotton-linen.html">Cotton Linen</a></h2>
         <p class="price">$22</p>
     </div>
+    
 </section>
-
-    </main>
+<p class="no-results" hidden>No candles match these filters. Try removing one.</p>
+    </div>
+</main>
     <footer>
         <div class="footer-text">
- <a href="home.html" class="logo">
-            <i></i>
+ <a href="index.html" class="logo">
+           
             <p class="logo-text">Ember</p>
         </a>
-        <p class="description">2026 Ember. All right reserved.</p>
+        <p class="description">2026 Ember. All rights reserved.</p>
    </div>
 </footer>
 <script src="cart.js"></script>

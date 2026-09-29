@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ember Candle Shop</title>
+    <meta name="description" content="Get in touch with Ember. Questions about our candles, orders or shipping? We're happy to help.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <p class="logo-text">Ember</p>
+        </a>
+       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="navbar" id="main-menu">
+           
+            <a href="index.html">Home</a>
+            <a href="all.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+        <nav class="header-icons">
+            <a href="all.html#search" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </a>
+            <a href="wishlist.html" aria-label="Wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+            </a>
+            <a href="cart.html" class="cart" aria-label="Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="badge">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-top">
+            <div class="contact-info reveal">
+                <h1>Contact Us</i></h1>
+                <p class="contact-intro">We'd love to hear from you! Whether you have a question about our products, an order or just want to say hello, we're always happy to help.</p>
+
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                        <div>
+                            <a href="tel:+48123456789">+48 123 456 789</a>
+                            <p>Mon–Fri, 9:00–18:00</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+                        <div>
+                            <a href="mailto:hello@embercandles.com">hello@embercandles.com</a>
+                            <p>We usually reply within 24 hours.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                        <div>
+                            <strong>ul. Kwiatowa 12</strong>
+                            <p>00-001 Warsaw, Poland</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Ember on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Ember on Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Ember on TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Ember on Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="visually-hidden">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+
+                <label for="contact-name" class="visually-hidden">Your name</label>
+                <input type="text" id="contact-name" name="name" placeholder="Your name *" autocomplete="name" required>
+
+                <label for="contact-email" class="visually-hidden">Your email</label>
+                <input type="email" id="contact-email" name="email" placeholder="Your email *" autocomplete="email" required>
+
+                <label for="contact-message" class="visually-hidden">Message</label>
+                <textarea id="contact-message" name="message" rows="6" placeholder="Message *" required></textarea>
+
+                <button type="submit" class="checkout-btn">Send Message <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+        </section>
+
+        <section class="showroom reveal" aria-label="Our showroom">
+            <iframe class="showroom-map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=21.0022%2C52.2247%2C21.0222%2C52.2347&amp;layer=mapnik&amp;marker=52.2297%2C21.0122"
+                title="Map showing the Ember showroom in Warsaw"
+                loading="lazy"></iframe>
+            <div class="showroom-info">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                    <h2>Our Showroom</h2>
+                    <p>ul. Kwiatowa 12<br>00-001 Warsaw, Poland</p>
+                    <p>Mon–Fri: 10:00–18:00<br>Sat: 10:00–14:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <a href="index.html" class="logo">
+                <p class="logo-text">Ember</p>
+            </a>
+            <p class="description">2026 Ember. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

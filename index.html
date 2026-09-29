@@ -3,161 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMBER Candle Shop</title>
+    <title>Ember Candle Shop</title>
     <meta name="description" content="Handmade soy candles inspired by nature. Discover calming scents for a cozier home, with eco-friendly packaging and fast shipping across the EU.">
-    <meta name="keywords" content="">
     <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>
-        <a href="home.html" class="logo">
-            <i></i>
+        <a href="index.html" class="logo">
             <p class="logo-text">Ember</p>
         </a>
-        <div class="navbar">
+           <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="navbar" id="main-menu">
             <a href="index.html">Home</a>
             <a href="all.html">Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            </div>
-            <nav class="header-icons">
-    <a href="/search" aria-label="Search">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"/>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-  </svg>
-</a>
-<a href="/wishlist" aria-label="Wishlist">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-  </svg>
-</a>
-<a href="/cart" class="cart" aria-label="Cart">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
-    <line x1="3" y1="6" x2="21" y2="6"/>
-    <path d="M16 10a4 4 0 0 1-8 0"/>
-  </svg>
-  <span class="badge">0</span>
-</a>
-</nav>
+        </div>
+        <nav class="header-icons">
+            <a href="all.html#search" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </a>
+            <a href="wishlist.html" aria-label="Wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+            </a>
+            <a href="cart.html" class="cart" aria-label="Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="badge">0</span>
+            </a>
+        </nav>
     </header>
+
     <main>
-<div class="hero">
-    <div class="hero-text">
-        <h1>Candles for a calmer tomorrow.</h1>
-        <p class="description">Handcrafted scents to make your home a more peaceful place.</p>
-        <a class="hero-btn" href="all.html">Shop Now</a>
-    </div>
-</div>
-<div class="hero-second">
-    <div class="second-boxes">
-        <div class="second-box">
-            <i></i>
-            <h2>Natural Ingredients</h2>
+        <div class="hero">
+            <div class="hero-text reveal">
+                <h1>Candles<br> for a calmer tomorrow.</h1>
+                <p class="description">Handcrafted scents to make your home <br>a more peaceful place.</p>
+                <a class="hero-btn" href="all.html">Shop Now</a>
+            </div>
+            <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,70 C240,115 480,115 720,85 C960,55 1200,25 1440,55 L1440,120 L0,120 Z"/>
+            </svg>
         </div>
-        <div class="second-box">
-            <i></i>
-            <h2>Handmade with Care</h2>
+
+        <div class="third-hero">
+            <div class="third-top reveal">
+                <h3>New Arrivals</h3>
+                <a class="third-btn" href="all.html">View All <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="third-boxes">
+                <div class="third-box reveal">
+                    <div class="image-wrap">
+                        <a href="product-pages/vanilla-bliss.html"><img src="images/cream-vanilla.png" alt="Vanilla Bliss candle"></a>
+                        <button class="like-btn" data-id="vanilla-bliss" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h4><a href="product-pages/vanilla-bliss.html">Vanilla Bliss</a></h4>
+                    <p class="price">$24</p>
+                </div>
+
+                <div class="third-box reveal">
+                    <div class="image-wrap">
+                        <a href="product-pages/amber-wood.html"><img src="images/cream-amber-wood.png" alt="Amber Wood candle"></a>
+                        <button class="like-btn" data-id="amber-wood" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h4><a href="product-pages/amber-wood.html">Amber Wood</a></h4>
+                    <p class="price">$26</p>
+                </div>
+
+                <div class="third-box reveal">
+                    <div class="image-wrap">
+                        <a href="product-pages/cedar-escape.html"><img src="images/green-cedar.png" alt="Cedar Escape candle"></a>
+                        <button class="like-btn" data-id="cedar-escape" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h4><a href="product-pages/cedar-escape.html">Cedar Escape</a></h4>
+                    <p class="price">$24</p>
+                </div>
+            </div>
         </div>
-        <div class="second-box">
-            <i></i>
-            <h2>Fast Shipping EU</h2>
+
+        <div class="fourth-hero">
+            <h5 class="reveal">Why Choose EMBER?</h5>
+            <div class="hero-second">
+                <div class="second-boxes">
+                    <div class="second-box reveal">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        <h2>Natural Ingredients</h2>
+                    </div>
+                    <div class="second-box reveal">
+                        <i class="fa-solid fa-gift" aria-hidden="true"></i>
+                        <h2>Handmade with Care</h2>
+                    </div>
+                    <div class="second-box reveal">
+                        <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                        <h2>Fast Shipping EU</h2>
+                    </div>
+                    <div class="second-box reveal">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <h2>A Gift for Every Occasion</h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="second-box">
-            <i></i>
-            <h2>A Gift for Every Occasion</h2>
+
+        <div class="fifth-hero">
+            <div class="fifth-text reveal">
+                <h2>Create a cozy atmosphere at home</h2>
+                <a class="fifth-btn" href="all.html">Shop Candles <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
         </div>
-    </div>
-</div>
-<div class="third-hero">
-    <div class="third-top">
-        <h3>New Arrivals</h3>
-        <a class="third-btn" href="all.html">View All</a>
-    </div>
-    <div class="third-boxes">
-        <div class="third-box">
-            <div class="image-wrap">
-            <img src="images/cream-vanilla.png" alt="Vanilla Candle">
-            <button class="like-btn" data-id="vanilla-bliss" aria-label="Add to liked">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-      </svg>
-            </button>
-        </div>
-            <h4>Vanilla Bliss</h4>
-            <p class="price">$24</p>
-        </div>
-    </div>
-       <div class="third-box">
-            <div class="image-wrap">
-            <img src="images/cream-amber-wood.png" alt="Amber Wood Candle">
-            <button class="like-btn" data-id="amber-wood" aria-label="Add to liked">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-      </svg>
-            </button>
-        </div>
-            <h4>Amber Wood</h4>
-            <p class="price">$26</p>
-        </div>
-    </div>
-       <div class="third-box">
-            <div class="image-wrap">
-            <img src="images/green-cedar.png" alt="Cedar Escape Candle">
-            <button class="like-btn" data-id="cedar-escape" aria-label="Add to liked">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-      </svg>
-            </button>
-        </div>
-            <h4>Cedar Escape</h4>
-            <p class="price">$24</p>
-        </div>
-    </div>
-</div>
-<div class="fourth-hero">
-    <h5>Why Choose EMBER?</h5>
-    <div class="fourth-hero-boxes">
-        <div class="fourth-hero-box">
-            <i> </i>
-            <h5>Natural Soy Wax</h5>
-            <p class="box-description">Clean and long-lasting burn</p>
-        </div>
-          <div class="fourth-hero-box">
-            <i> </i>
-            <h5>Unique Scents</h5>
-            <p class="box-description">Inspired by nature</p>
-        </div>
-          <div class="fourth-hero-box">
-            <i> </i>
-            <h5>Sustainable Packaging</h5>
-            <p class="box-description">Better for the planet</p>
-        </div>
-          <div class="fourth-hero-box">
-            <i> </i>
-            <h5>Small Business</h5>
-            <p class="box-description">Made with love</p>
-        </div>
-    </div>
-</div>
-<div class="fifth-hero">
-    <div class="fifth-text">
-        <h6>Create a cozy atmosphere at home</h6>
-        <a href="about.html">Get To Know Us</a>
-    </div>
-</div>
     </main>
-      <footer>
+
+    <footer>
         <div class="footer-text">
- <a href="home.html" class="logo">
-            <i></i>
-            <p class="logo-text">Ember</p>
-        </a>
-        <p class="description">2026 Ember. All right reserved.</p>
-   </div>
-</footer>
-<script src="cart.js"></script>
+            <a href="index.html" class="logo">
+                <p class="logo-text">Ember</p>
+            </a>
+            <p class="description">2026 Ember. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
 </body>
 </html>
